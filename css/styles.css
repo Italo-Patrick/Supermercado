@@ -1,0 +1,261 @@
+:root{
+    --cor-principal:#ff4747; /*Vermelho para promoções*/
+    --cor-secundaria:#f1b800; /*Amarelo para destaques*/
+    --cor-da-palavra:#0A1E6A; /*cor da palavra galvão da logo*/
+    --cor-fundo:#F8F8FF;
+    --cor-texto:#222222;
+    --cor-muted:#666666;
+    /*Fontes*/
+    --font-nav: "Inter", sans-serif; /*propriedade font-family*/
+    --font-titulos: "Poppins",sans-serif;
+    --font-paragrafos: "Roboto", sans-serif;
+    /*Tamanhos das fontes*/
+    --tf-titulos: 2.4rem; /*propriedade font-size*/
+    --tf-subtitulos: 1.8rem;
+    --tf-textos:1rem;
+    /*Espaçamento*/
+    --pd-base: 12px;
+    --rd-base: 6px;
+    /*intensidade/espessura da fonte*/
+    --peso-nav:600; /*propriedade font-weight*/
+    --peso-titulos:700;
+    --peso-paragrafos:400;
+    /*bordas e efeitos*/
+    --sombra-cards: 0px 4px 14px rgba(0,0,0,0.15);
+
+}
+
+html, body {
+  margin: 0;
+  background-color: var(--cor-fundo);
+  padding: 0;
+}
+
+.wrap{
+    max-width: 1280px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/*Titulos*/
+
+.titulo-da-pg-um{
+    font-family: var(--font-titulos);
+    font-size: var(--tf-titulos);
+    padding-left: 16px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+/*Leyout mobile (mobile first)*/
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--cor-secundaria);
+}
+
+header .brand{
+    display: inline-flex;
+    align-items: center;
+}
+
+header .logo img{
+    width: 140px;
+    height: auto;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--font-nav);
+}
+
+/*Menu empilhado*/
+.nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-links a{
+    font-family: var(--font-nav);
+    font-weight: var(--peso-nav);
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.pesquisa-box {
+    display: flex;
+    gap: 8px;
+}
+
+.pesquisa-box input {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: var(--rd-base);
+    border: 2px solid #ddd;
+    font-family: var(--font-paragrafos);
+}
+ .pesquisa-box button {
+    padding: 8px 10px;
+    border-radius: var(--rd-base);
+    border: none;
+    background: var(--cor-principal);
+    color: #fff;
+    cursor: pointer;
+ }
+/*main-hero*/
+ .banner {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+ }
+
+ .banner picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+ }
+
+ .container-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,  1fr));
+    gap: 20px;
+    justify-items:center ;
+    padding-left: 16px;
+    padding-right: 16px;
+ }
+
+.card img{
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.card-cosmetico img{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 10px auto 16px auto;
+    margin: 10px auto 16px;
+}
+
+.card-pada img{
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 10px auto 16px auto;
+    margin: 10px auto 16px;
+}
+
+.pada-banner{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.pada-banner picture{
+    display: block;
+    width: 100%;
+}
+.pada-banner picture img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*Footer*/
+h3{
+font-family: var(--font-titulos);
+font-size: 1,1rem;
+margin-bottom: 0.3rem;
+}
+
+footer{
+    background-color: var(--cor-da-palavra);
+    padding: 32px 16px;
+}
+
+.container-footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+    font-family: var(--font-paragrafos);
+    font-size: var(--tf-textos);
+    color: #F8F8FF;
+}
+
+.lista-limpa{
+  list-style-type: none; 
+  padding-left: 0;
+  padding-left: 16px;
+
+}
+
+ /*banner no mobile*/
+ @media (max-width: 768px){
+    .banner{
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+ }
+ /*Leyout desktop*/
+ @media (min-width: 768px){
+    header{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    nav{
+        flex-direction: row;
+        align-items: center;
+        margin-right: 24px;
+        gap: 20px;
+    }
+    /*background do banner desktop*/
+.banner-promocao{
+    width: 100%;
+    background-image: url('../assets/banners/Banners-especiais/natal.jpg');
+    background-size: cover;
+    background-position: center;}
+  /*=========================================================================*/  
+    .pesquisa-box{
+        max-width: 260px;
+        flex: 1;
+    }
+    .nav-links{
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .pada-banner picture img{
+     height: 350px;
+     object-fit: cover;
+}
+
+.container-footer{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+    font-family: var(--font-paragrafos);
+    font-size: var(--tf-textos);
+    color: #F8F8FF;
+}
+ }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galvao</title>
+    <!--import de fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+    <!-- Poppins (Títulos) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Roboto (Parágrafos) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+ <div class="wrap" id="page">
+    <header>
+        <a class="brand" href="index.html" aria-label="Ir para o inicil">
+                <h1 class="logo">
+                <img src="assets/icons/logo-galvao.png" alt="supermercado Galvão">
+                </h1>
+        </a>
+            <form class="pesquisa-box" role="search">
+                <input type="search" placeholder="Buscar Produtos..." aria-label="Buscar Produtos">
+                <button type="submit">🔍</button>
+            </form>
+        <nav aria-label="navegação principal">
+            <div class="nav-links" id="navlinks">
+                <a href="home" class="ghost">HOME</a>
+                <a href="produtos" class="ghost">PRODUTOS</a>
+                <a href="servicos" class="ghost">SERVIÇOS</a>
+                <a href="sobre" class="ghost">SOBRE</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Hero-->
+        <section class="banner-promocao" aria-label="banner de promoções do supermercado">
+            <div class="banner">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="assets/banners/promoçoes/mob-ofertas-semana.jpg">
+                    <img src="assets/banners/promoçoes/desk-ofertas-semana.jpg" alt="Ofertas da semana"
+                    loading="lazy">
+                </picture>
+            </div>
+        </section>
+        <section class="destaques">
+            <h2 class="titulo-da-pg-um">Produtos em destaque</h2>
+            <div class="container-cards">
+                <div class="card"> <img src="assets/produtos/card2.jpg" alt="Ofertas da semana em carnes e salgados"></div>
+                <div class="card"> <img src="assets/produtos/card3.jpg" alt="Ofertas de vários produtos na Black Friday"></div>
+                <div class="card"> <img src="assets/produtos/card4.jpg" alt="Ofertas da semana em carnes e padaria"></div>
+                <div class="card"> <img src="assets/produtos/card5.jpg" alt="Mega ofertas em vários produtos"></div>
+                <div class="card"> <img src="assets/produtos/card6.webp" alt="Ofertas de hortifrúti"></div>
+            </div>
+        </section>
+        <!--Cosmeticos-->
+        <section class="cosmeticos">
+            <h2 class="titulo-da-pg-um">Cosméticos</h2>
+            <div class="container-cards">
+                <div class="card-cosmetico"> <img src="assets/produtos/cosmeticos/ativador-cachos.jpg" alt="Ativador de cachos da marca Salon Line"></div>
+                <div class="card-cosmetico"> <img src="assets/produtos/cosmeticos/linha-meu-liso.jpg" alt="Linha de produtos Meu Liso da marca Salon Line"></div>
+                <div class="card-cosmetico"> <img src="assets/produtos/cosmeticos/mascara-matizadora.jpg" alt="Máscara matizadora da marca Salon Line"></div>
+            </div>
+        </section>
+        <!--padaria-->
+        <section class="padaria">
+            <h2 class="titulo-da-pg-um">Padaria </h2>
+            <div class="pada-banner">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="assets/banners/Banners-especiais/mobile-pada.jpg">
+                    <img src="assets/banners/Banners-especiais/pada-banner2.jpg" alt=""
+                    loading="lazy">
+                </picture>
+            </div>
+            <div class="container-cards">
+                <div class="card-pada"> <img src="assets/produtos/paddaria/pada-card1.jpg" alt=""></div>
+                <div class="card-pada"> <img src="assets/produtos/paddaria/pada-cars2.jpg" alt=""></div>
+            </div>
+        </section>
+
+        <!--Radapé-->
+        <footer>
+            <div class="container-footer">
+            <div class="footer-col">
+                <ul class="footer-funcionamento lista-limpa">
+                <h3>Horario de funcionamento:</h3>
+                <li>Seg a sab de 07h00 as 20h00</li>
+                <li>Aos domingos: 08h00 as 12h00</li>
+              </ul> 
+            </div>
+            <div class="footer-col">
+              <ul class="footer-servicos lista-limpa">
+                <h3>Serviços</h3>
+                <li>Entrega de compras</li>
+                <li>entrega de galão de agua mineral</li>
+                <li>compras no carnê da loja</li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <ul class="contatos lista-limpa">
+                <h3>contatos</h3>
+                <li>WhatsApp <br>(98)982769595</li>
+                <li>Telefone <br>(98) 3654-5362 </li>
+              </ul>
+            </div>
+            </div>
+        </footer>
+    </main>
+ </div>
+</body>
+</html>
