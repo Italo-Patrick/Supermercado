@@ -174,7 +174,7 @@ nav {
 }
 
 /*Footer*/
-h3{
+.container-footer h3{
 font-family: var(--font-titulos);
 font-size: 1,1rem;
 margin-bottom: 0.3rem;
@@ -183,6 +183,11 @@ margin-bottom: 0.3rem;
 footer{
     background-color: var(--cor-da-palavra);
     padding: 32px 16px;
+}
+
+.container-footer h3{
+    margin-bottom:  0.6rem;
+    line-height: 1.2;
 }
 
 .container-footer{
@@ -195,11 +200,34 @@ footer{
     color: #F8F8FF;
 }
 
+.container-footer ul{
+    margin: 0;
+    padding: 0;
+}
+
 .lista-limpa{
   list-style-type: none; 
   padding-left: 0;
   padding-left: 16px;
+}
 
+.whats-link{
+    color: inherit;
+    text-decoration: underline;
+}
+
+.end-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-family: var(--font-paragrafos);
+    font-size: 10px;
+    padding: 0;
+    color: var(--cor-fundo);
+}
+
+.footer-icons{
+    color: var(--cor-fundo);
 }
 
  /*banner no mobile*/
@@ -234,7 +262,7 @@ footer{
     /*background do banner desktop*/
 .banner-promocao{
     width: 100%;
-    background-image: url('../assets/banners/Banners-especiais/natal.jpg');
+    background-image: url('');
     background-size: cover;
     background-position: center;}
   /*=========================================================================*/  
@@ -262,5 +290,23 @@ footer{
     font-family: var(--font-paragrafos);
     font-size: var(--tf-textos);
     color: #F8F8FF;
+}
+
+.whats-link{
+    color: inherit;
+    text-decoration: underline;
+}
+
+.end-footer{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-paragrafos);
+    font-size: 10px;
+    padding: 0;
+    color: var(--cor-fundo);
+}
+
+.footer-icons{
+    color: var(--cor-fundo);
 }
  }
