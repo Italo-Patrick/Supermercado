@@ -123,6 +123,10 @@ nav {
     object-fit: cover;
  }
 
+ .section-main{
+      margin-bottom: 32px;  
+ }
+
  .container-cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,  1fr));
@@ -253,6 +257,9 @@ footer{
     margin: 0;
   }
 
+   .section-main{
+    margin-bottom: 75px;  
+ }
     nav{
         flex-direction: row;
         align-items: center;
