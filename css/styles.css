@@ -54,7 +54,7 @@ header{
     margin: 0;
     flex-direction: column;
     gap: 6px;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 2rem;
     background: var(--cor-secundaria);
 }
 
@@ -211,7 +211,6 @@ footer{
 
 .lista-limpa{
   list-style-type: none; 
-  padding-left: 0;
   padding-left: 16px;
 }
 
@@ -232,6 +231,23 @@ footer{
 
 .footer-icons{
     color: var(--cor-fundo);
+}
+
+/*Pagina de produtos*/
+.titulo-pg2{
+    background: linear-gradient(to bottom,     #ff6b6b, #ff4747);
+    border-bottom: 3px solid rgba(0,0,0,0.08);
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.apresentacao{
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-titulos);
+    font-size: var(--tf-titulos);
+    padding-left: 16px;
 }
 
  /*banner no mobile*/
@@ -315,5 +331,11 @@ footer{
 
 .footer-icons{
     color: var(--cor-fundo);
+}
+
+/*Pagina de produtos*/
+.titulo-pg2{
+    width: 100%;
+    background-color: var(--cor-principal);
 }
  }
