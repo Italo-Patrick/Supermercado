@@ -250,6 +250,26 @@ footer{
     padding-left: 16px;
 }
 
+.container-pro-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,  1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+.card-pro{
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 3/4;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+    background-color:#f1b800;
+}
+
  /*banner no mobile*/
  @media (max-width: 768px){
     .banner{
@@ -338,4 +358,24 @@ footer{
     width: 100%;
     background-color: var(--cor-principal);
 }
+
+.container-pro-cards{
+    display: flex;
+    max-width: 100%;
+    gap: 16px;
+    justify-content: center;
+}
+
+.card-pro{
+    display: grid;
+    width: 100%;
+    max-width: 1280px;
+    aspect-ratio: 3/4;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+    margin: 16px;
+    background-color:#f1b800;
  }
+}
