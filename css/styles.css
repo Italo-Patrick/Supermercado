@@ -285,11 +285,7 @@ footer{
     width: 100%;
     max-width: 180px;
     align-items: center;
-}
-.card-arroz img{
-    width: 100%;
-    object-fit: contain;
-    padding-top: 24px;
+    padding-top: 16px;
 }
 
 .preco{
