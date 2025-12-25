@@ -277,6 +277,8 @@ footer{
 .product-img img{
     width: 100%;
     max-width: 180px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
     display: block;
 }
 
