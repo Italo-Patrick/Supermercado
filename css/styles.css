@@ -261,7 +261,7 @@ footer{
     display: grid;
     grid-template-rows: 1fr auto;
     width: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/3;
     border-radius: var(--rd-base);
     border: 1px solid #222;
     text-align: center;
