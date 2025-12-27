@@ -286,7 +286,7 @@ footer{
 .preco{
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
     border-top: 1px solid #222;
     background-color: var(--cor-secundaria);
     font-size: var(--tf-textos);
@@ -397,22 +397,15 @@ footer{
 }
 
 .container-pro-cards{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px ,1fr));
     max-width: 100%;
     gap: 16px;
-    justify-content: center;
+    margin: 0 auto;
 }
 
-.card-pro{
-    display: grid;
-    width: 100%;
-    max-width: 1280px;
+.card-base{
     aspect-ratio: 3/4;
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    text-align: center;
-    margin: 16px;
-    background-color:#f1b800;
- }
+}
+
 }
