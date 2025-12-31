@@ -308,6 +308,36 @@ footer{
     margin: 0;
     padding-bottom: 2px;
 }
+
+/*Pagina de sobre*/
+.container-geral{
+    display: flex;
+    gap: 16px;
+    text-align: left;
+    align-items: center;
+}
+
+.visao-geral{
+    font-family: var(--font-titulos);
+    font-size: var(--tf-titulos);
+    font-weight: var(--peso-titulos);
+    padding: var(--pd-base);
+}
+
+.predio{
+    width: 360px;
+    height: auto;
+    padding-left: 100px;
+}
+
+.paragrafo-geral{
+    font-family: var(--font-paragrafos);
+    font-size: 1.5rem;
+    font-weight: var(--peso-paragrafos);
+    margin-right: 80px;
+}
+
+
  /*banner no mobile*/
  @media (max-width: 768px){
     .banner{
