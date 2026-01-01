@@ -346,6 +346,7 @@ footer{
     font-family: var(--font-paragrafos);
     font-size: 1.5rem;
     font-weight: var(--peso-paragrafos);
+    text-align: justify;
 }
 
 
@@ -455,7 +456,7 @@ footer{
     max-width: 1280px;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     align-items: center;
     margin: 0 auto;
 }
@@ -475,6 +476,19 @@ footer{
     font-weight: var(--peso-titulos);
     padding: 16px;
   }
+
+  .list-pg-sobre {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.list-pg-sobre p,
+.list-pg-sobre ul {
+  text-align: justify;
+  font-size: var(--tf-textos);
+  font-family: var(--font-paragrafos);
+  font-weight: var(--peso-paragrafos);
+}
 
 
 }
