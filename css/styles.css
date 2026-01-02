@@ -101,6 +101,13 @@ nav {
 
 .nav-links.active{
     display: flex;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    background: var(--cor-secundaria);
+    padding: 16px;
+    z-index: 1000; 
 }
 
 .pesquisa-box {
@@ -131,6 +138,7 @@ nav {
     border: none;
     cursor: pointer;
     display: block;
+    text-align: right;
 }
 
 /*main-hero*/
