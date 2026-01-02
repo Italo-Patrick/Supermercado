@@ -108,6 +108,24 @@ nav {
     color: #fff;
     cursor: pointer;
  }
+
+/*menu hamburger para mobile*/
+.menu-toggle{
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+.nav-links{
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+
 /*main-hero*/
  .banner {
     max-width: 600px;
@@ -382,6 +400,17 @@ footer{
         margin-right: 24px;
         gap: 20px;
     }
+
+    .nav-links{
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        margin-top: 0;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
     /*background do banner desktop*/
 .banner-promocao{
     width: 100%;
@@ -392,10 +421,6 @@ footer{
     .pesquisa-box{
         max-width: 260px;
         flex: 1;
-    }
-    .nav-links{
-        flex-direction: row;
-        gap: 16px;
     }
 
     .pada-banner picture img{
@@ -453,9 +478,9 @@ footer{
 
 /*Pagina de sobre*/
 .container-padrao{
+    display: flex;
     max-width: 1280px;
     flex-direction: row;
-    align-items: center;
     gap: 10px;
     align-items: center;
     margin: 0 auto;
