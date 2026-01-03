@@ -20,17 +20,18 @@
 <body>
  <div class="wrap" id="page">
     <header>
+        <div class="top-bar">
         <a class="brand" href="index.html" aria-label="Ir para o inicil">
                 <h1 class="logo">
                 <img src="assets/icons/logo-galvao.png" alt="supermercado Galvão">
                 </h1>
         </a>
+            <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        </div>
             <form class="pesquisa-box" role="search">
                 <input type="search" placeholder="Buscar Produtos..." aria-label="Buscar Produtos">
                 <button type="submit">🔍</button>
             </form>
-
-            <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
             
         <nav aria-label="navegação principal">
             <div class="nav-links" id="navlinks">
@@ -143,11 +144,12 @@
         </footer>
     </main>
  </div>
-   <!--script dos icones do footer-->
-  <script src="https://unpkg.com/lucide@latest"></script>
+    </main>
+       <!--scripts da pagina e dos icones do footer-->
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
         <script>
             lucide.createIcons();
         </script>
-    </main>
 </body>
 </html>
