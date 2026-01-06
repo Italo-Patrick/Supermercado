@@ -150,7 +150,6 @@ nav {
     position: absolute;
     inset: 0;
     display: flex;
-    margin-top: 22px;
     justify-content: center;
     align-items: center;
     opacity: 0;
