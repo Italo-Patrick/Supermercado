@@ -147,10 +147,15 @@ nav {
 
 /*main-hero*/
  .banner {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px 0;
-    display: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    margin-top: 22px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
  }
 
  .banner picture img {
@@ -164,11 +169,15 @@ nav {
  .slider{
     position: relative;
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 330px;
     overflow: hidden;
  }
 
 .banner.active{
-    display: block;
+    opacity: 2;
+    pointer-events: auto;
 }
 
  .section-main{

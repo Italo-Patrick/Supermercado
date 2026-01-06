@@ -19,18 +19,18 @@ document.addEventListener('click', (e)=>
 const banners = document.querySelectorAll('.banner');
 let index = 0;
 
-function mostrarBanner() {
-    banners.forEach(banner => banner.classList.remove('active'));
-    banners[index].classList.add('active');
-}
+// mostra o primeiro
+banners[index].classList.add('active');
 
 function proximoBanner() {
+    banners[index].classList.remove('active');
+
     index++;
     if (index >= banners.length) {
         index = 0;
     }
-    mostrarBanner();
+
+    banners[index].classList.add('active');
 }
 
-mostrarBanner();
 setInterval(proximoBanner, 4000);
