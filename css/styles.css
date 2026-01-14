@@ -135,14 +135,14 @@ nav {
 .menu-toggle{
     font-size: 28px;
     background: none;
-    border: none;
+    border: 1px solid ;
     border-radius: 8px;
     cursor: pointer;
     display: block;
     text-align: right;
     color: black;
     padding: 10px;
-    background-color: rgba(128, 128, 128, 0.3);
+
 }
 
 /*main-hero*/
