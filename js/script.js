@@ -21,20 +21,15 @@ const banners = document.querySelectorAll('.banner');
 let index = 0;
 
 if (banners.length > 0) {
-
     banners[index].classList.add('active');
-
     function proximoBanner() {
         banners[index].classList.remove('active');
-
         index++;
         if (index >= banners.length) {
             index = 0;
         }
-
         banners[index].classList.add('active');
     }
-
     setInterval(proximoBanner, 4000);
 }
 
@@ -49,7 +44,6 @@ const cards = document.querySelectorAll('.card-base');
 if (formBusca && inputBusca) {
     formBusca.addEventListener('submit', (e) => {
         e.preventDefault();
-
         const termo = inputBusca.value.trim();
         if (termo) {
             window.location.href = `produtos.html?busca=${encodeURIComponent(termo)}`;
@@ -61,13 +55,11 @@ if (formBusca && inputBusca) {
 if (inputBusca && cards.length > 0) {
     inputBusca.addEventListener('input', () => {
         const termo = inputBusca.value.toLowerCase().trim();
-
         cards.forEach(card => {
             const nome = card
                 .querySelector('.product-name')
                 .textContent
                 .toLowerCase();
-
             card.style.display = nome.includes(termo) ? '' : 'none';
         });
     });
@@ -80,4 +72,30 @@ if (inputBusca && cards.length > 0) {
         inputBusca.value = termoURL;
         inputBusca.dispatchEvent(new Event('input'));
     }
+}
+
+// botão de fechamento do pop-up do whatsapp
+const popup = document.getElementById("whatsPopup");
+const closeBtn = document.getElementById("closePopup");
+const footer = document.getElementById("footer");
+
+if (popup && closeBtn) {
+  closeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    popup.style.display = "none";
+  });
+}
+
+if (popup && footer) {
+  window.addEventListener("scroll", () => {
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (footerTop < windowHeight) {
+      popup.style.display = "none";
+    } else {
+      popup.style.display = "flex";
+    }
+  });
 }
