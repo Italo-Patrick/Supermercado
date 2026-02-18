@@ -33,47 +33,6 @@ if (banners.length > 0) {
     setInterval(proximoBanner, 4000);
 }
 
-
-
-// Busca de produtos (global + local)
-const formBusca = document.querySelector('.pesquisa-box');
-const inputBusca = document.querySelector('.pesquisa-box input');
-const cards = document.querySelectorAll('.card-base');
-
-/* ---------- BUSCA GLOBAL (todas as páginas) ---------- */
-if (formBusca && inputBusca) {
-    formBusca.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const termo = inputBusca.value.trim();
-        if (termo) {
-            window.location.href = `produtos.html?busca=${encodeURIComponent(termo)}`;
-        }
-    });
-}
-
-/* ---------- FILTRO LOCAL (somente produtos.html) ---------- */
-if (inputBusca && cards.length > 0) {
-    inputBusca.addEventListener('input', () => {
-        const termo = inputBusca.value.toLowerCase().trim();
-        cards.forEach(card => {
-            const nome = card
-                .querySelector('.product-name')
-                .textContent
-                .toLowerCase();
-            card.style.display = nome.includes(termo) ? '' : 'none';
-        });
-    });
-
-    // Aplica busca vinda da URL (quando veio de outra página)
-    const params = new URLSearchParams(window.location.search);
-    const termoURL = params.get('busca');
-
-    if (termoURL) {
-        inputBusca.value = termoURL;
-        inputBusca.dispatchEvent(new Event('input'));
-    }
-}
-
 // botão de fechamento do pop-up do whatsapp
 const popup = document.getElementById("whatsPopup");
 const closeBtn = document.getElementById("closePopup");
@@ -99,3 +58,72 @@ if (popup && footer) {
     }
   });
 }
+
+  // Busca de produtos (global + local)
+const formBusca = document.querySelector('.pesquisa-box');
+const inputBusca = document.querySelector('.pesquisa-box input');
+
+/* ---------- BUSCA GLOBAL (todas as páginas) ---------- */
+if (formBusca && inputBusca) {
+    formBusca.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const termo = inputBusca.value.trim();
+        if (termo) {
+            window.location.href = `produtos.html?busca=${encodeURIComponent(termo)}`;
+        }
+       });
+}
+
+// Cards dos produtos
+const container = document.querySelector(".container-pro-cards");
+
+fetch("./assets/produtos/banco.json")
+.then (response => response.json())
+.then (produtos => {
+    
+    produtos.forEach (produto => {
+    const card = document.createElement("div");
+    card.classList.add("card-base");
+    card.innerHTML =  `
+    <div class="product-img">
+    <img src="${produto.imagem}" alt="${produto.alt}" loading="lazy">
+    </div>
+    <div class="preco">
+        <h4 class="product-name">${produto.nome}</h4>
+        <span class="price">${produto.preco}</span>
+    </div>
+     `;
+
+    container.appendChild(card);
+  });
+
+/* ---------- FILTRO LOCAL (somente produtos.html) ---------- */
+if (inputBusca) {
+    inputBusca.addEventListener('input', () => {
+        const termo = inputBusca.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.card-base');
+
+
+        cards.forEach(card => {
+            const nome = card
+                .querySelector('.product-name')
+                .textContent
+                .toLowerCase();
+            card.style.display = nome.includes(termo) ? '' : 'none';
+        });
+    });
+
+    // Aplica busca vinda da URL (quando veio de outra página)
+    const params = new URLSearchParams(window.location.search);
+    const termoURL = params.get('busca');
+
+    if (termoURL) {
+        inputBusca.value = termoURL;
+        inputBusca.dispatchEvent(new Event('input'));
+    }
+}
+})
+.catch(err => {
+  console.error("Erro ao carregar produto.", err)
+  container.innerHTML = "<p>Não foi possível carregar os produtos no momento.</p>"
+})
