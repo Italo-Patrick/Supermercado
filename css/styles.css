@@ -157,6 +157,10 @@ nav {
     transition: opacity 0.5s ease;
  }
 
+ .banner-link{
+    display: block;
+ }
+
  .banner picture img {
     width: 100%;
     height: auto;
