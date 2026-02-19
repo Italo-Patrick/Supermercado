@@ -76,12 +76,37 @@ if (formBusca && inputBusca) {
 
 // Cards dos produtos
 const container = document.querySelector(".container-pro-cards");
+let todosProdutos = [];
 
 fetch("./assets/produtos/banco.json")
 .then (response => response.json())
 .then (produtos => {
+ const params = new URLSearchParams(window.location.search);
+const categoriaURL = params.get("categoria")?.toLowerCase();
+const buscaURL = params.get("busca")?.toLowerCase();
+
+let produtosFiltrados = produtos;
+
+// 🔹 filtro por categoria
+if (categoriaURL) {
+  produtosFiltrados = produtosFiltrados.filter(produto =>
+    produto.categoria?.some(cat =>
+      cat.toLowerCase() === categoriaURL
+    )
+  );
+}
+
+// 🔹 filtro por busca (nome do produto)
+if (buscaURL) {
+  produtosFiltrados = produtosFiltrados.filter(produto =>
+    produto.nome.toLowerCase().includes(buscaURL)
+  );
+}
+
+    // limpa antes de renderizar (importante se reutilizar)
+    container.innerHTML = "";
     
-    produtos.forEach (produto => {
+    produtosFiltrados.forEach (produto => {
     const card = document.createElement("div");
     card.classList.add("card-base");
     card.innerHTML =  `

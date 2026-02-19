@@ -1,6 +1,7 @@
 [
   {
     "nome": "Arroz",
+    "categoria": ["promocao", "mercearia"],
     "preco": "A partir de R$3,00",
     "imagem": "assets/produtos/prateleira/arroz.png",
     "alt": "Pacote de 1 kg de arroz"
@@ -8,6 +9,7 @@
 
   {
     "nome": "Feijão",
+    "categoria": ["promocao", "mercearia"],
     "preco": "A partir de R$4,50",
     "imagem": "assets/produtos/prateleira/feijao.png",
     "alt": "Pacote de 1 kg de feijão"
@@ -15,6 +17,7 @@
 
   {
     "nome":"Açucar",
+    "categoria": ["promocao", "mercearia"],
     "preco":"A partir de R$3,15",
     "imagem":"assets/produtos/prateleira/acucar.png",
     "alt":"Pacote de 1 kg de açucar"
@@ -22,6 +25,7 @@
 
   {
     "nome":"Biscoito",
+    "categoria": ["promocao", "mercearia"],
     "preco":"A partir de R$7,91",
     "imagem":"assets/produtos/prateleira/biscoito.png",
     "alt": "Biscoito creme cracker" 
@@ -29,6 +33,7 @@
 
   {
     "nome":"Café",
+    "categoria":["mercearia"],
     "preco":"A partir de R$14,50",
     "imagem":"assets/produtos/prateleira/cafe.png",
     "alt":"PPacote de 500g de café"
@@ -36,6 +41,7 @@
 
   {
     "nome":"Carnes",
+    "categoria":["acougue","mercearia"],
     "preco":"Cortes a partir de R$5,00",
     "imagem":"assets/produtos/prateleira/carne.png",
     "alt": "corte de corne"
@@ -43,6 +49,7 @@
 
   {
     "nome":"Farinha",
+    "categoria":["mercearia"],
     "preco":"A partir de R$12,49",
     "imagem":"assets/produtos/prateleira/farinha.png",
     "alt": "Pacote de 1 kg de farinha"
@@ -50,6 +57,7 @@
 
   {
     "nome":"Leite",
+    "categoria":["mercearia"],
     "preco":"A partir de R$7,90",
     "imagem":"assets/produtos/prateleira/leite.png",
     "alt": "Leite de 1 litro"
@@ -57,6 +65,7 @@
 
   {
     "nome":"MAcarrão",
+    "categoria":["promocao", "mercearia"],
     "preco":"A partir de R$2,30",
     "imagem":"assets/produtos/prateleira/macarrao.png",
     "alt": "Pacote de 400g de macarrão"
@@ -64,6 +73,7 @@
 
   {
     "nome":"Óleo",
+    "categoria":["mercearia"],
     "preco":"A partir de R$8,70",
     "imagem":"assets/produtos/prateleira/oleo.png",
     "alt": "Um litro de óleo de soja"
@@ -71,6 +81,7 @@
 
   {
     "nome":"Catela de ovos",
+    "categoria":["promocao", "mercearia"],
     "preco":"A partir de R$15,80",
     "imagem":"assets/produtos/prateleira/ovos.png",
     "alt": "Cartela de ovos com 30 unidades"
@@ -78,6 +89,7 @@
 
   {
     "nome":"Papel higienico",
+    "categoria":["mercearia"],
     "preco":"A partir de R$11,79",
     "imagem":"assets/produtos/prateleira/papel-higienico.png",
     "alt": "Pacote de papel higienico comm 4 unidades"
@@ -85,6 +97,7 @@
 
   {
     "nome":"Sabão liquido",
+    "categoria":["mercearia"],
     "preco":"A partir de R$1,80",
     "imagem":"assets/produtos/prateleira/sabao.png",
     "alt": "Sabão liquido"
@@ -92,6 +105,7 @@
 
   {
     "nome":"Sal",
+    "categoria":["mercearia"],
     "preco":"A partir de R$81,28",
     "imagem":"assets/produtos/prateleira/sal.png",
     "alt": "Pacote de sal"
@@ -99,8 +113,25 @@
 
   {
     "nome":"Sardinha",
+    "categoria":["mercearia"],
     "preco":"A partir de R$2,56",
     "imagem":"assets/produtos/prateleira/sardinha.png",
     "alt": "Sarinha em lata"
+  },
+
+    {
+    "nome":"Tomate",
+    "categoria":["hortifruti", "mercearia"],
+    "preco":"Kg a partir de R$5,78",
+    "imagem":"assets/produtos/prateleira/tomate.png",
+    "alt": "Amostra de tomates"
+  },
+
+      {
+    "nome":"Cebola",
+    "categoria":["hortifruti","mercearia"],
+    "preco":"Kg a partir de R$4,89",
+    "imagem":"assets/produtos/prateleira/cebola.png",
+    "alt": "Amostra de cebolas"
   }
 ]
