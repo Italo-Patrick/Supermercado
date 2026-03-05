@@ -81,10 +81,6 @@ nav {
 }
 
 /*Menu empilhado*/
-.nav-links{
-    flex-direction: column;
-}
-
 .nav-links a{
     font-family: var(--font-nav);
     font-weight: var(--peso-nav);
